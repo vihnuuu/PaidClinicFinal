@@ -23,6 +23,7 @@ namespace DAL.Repositories.Interfaces
 
         // Отримати кількість пацієнтів, яких обслуговував лікар
         Task<int> GetPatientCountByDoctorIdAsync(int doctorId);
+
+
     }
 }
-

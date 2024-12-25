@@ -14,5 +14,6 @@ namespace DAL.Repositories.Interfaces
 
         // Отримати лікування з вартістю більше певної суми
         Task<IEnumerable<Treatment>> GetExpensiveTreatmentsAsync(decimal minCost);
+
     }
 }

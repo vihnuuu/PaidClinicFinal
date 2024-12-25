@@ -23,6 +23,7 @@ namespace DAL.Repositories.Impl
             return await _set.ToListAsync();
         }
 
+
         public async Task<T> GetByIdAsync(int id)
         {
             return await _set.FindAsync(id);
@@ -33,10 +34,12 @@ namespace DAL.Repositories.Impl
             await _set.AddAsync(entity);
         }
 
-        public async Task UpdateAsync(T entity)
+        public Task UpdateAsync(T entity)
         {
             _context.Entry(entity).State = EntityState.Modified;
+            return Task.CompletedTask;
         }
+
 
         public async Task DeleteAsync(int id)
         {
